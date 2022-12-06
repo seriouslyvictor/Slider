@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contruindo um Carosel 🎠🐎🏇</title>
+
+    <style>
+        .slider {
+            position: relative;
+            height: 100vh;
+            overflow: visible;
+            /* scale: 0.3; */
+
+        }
+
+        .slide {
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            transition: 1s;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn--voltar,
+        .btn--avancar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            position: absolute;
+            top: 50%;
+            background-color: blueviolet;
+            color: white;
+            border-radius: 50%;
+        }
+
+        .btn--voltar:hover,
+        .btn--avancar:hover {
+            color: blueviolet;
+            background-color: white;
+            border: 1px solid blueviolet;
+        }
+
+
+        .btn--avancar {
+            right: 0;
+        }
+
+        .btn--voltar {
+            left: 0;
+        }
+
+        .container--pontos {
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+        .ponto {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid blueviolet;
+            z-index: 10;
+        }
+
+        .cheio {
+            background-color: blueviolet;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+    <h1>Teste!</h1>
+    <div class="slider">
+        <div class="slide">
+            <img src="img/Kaisa_0.jpg" alt="Teste">
+        </div>
+        <div class="slide">
+            <img src="img/Kaisa_1.jpg" alt="Teste">
+        </div>
+        <div class="slide">
+            <img src="img/Kaisa_2.jpg" alt="Teste">
+        </div>
+        <button class="btn--voltar">⬅</button>
+        <button class="btn--avancar">➡</button>
+        <div class="container--pontos">
+            <div class="ponto cheio"></div>
+            <div class="ponto "></div>
+            <div class="ponto "></div>
+        </div>
+    </div>
+
+
+
+    <script src="carosel.js"></script>
+</body>
+
+</html>
